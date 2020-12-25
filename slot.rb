@@ -1,7 +1,7 @@
 
 
-
 #スロットゲーム
+
  current_point = 0
  current_coin = 100
 
@@ -39,7 +39,6 @@ loop do
 
  current_coin = current_coin-bets[player]
 
- #スロット
  puts "エンターキーを３回押してください"
 
 
@@ -75,7 +74,7 @@ loop do
 
  puts "--------------------------------------------"
 
-　#当たった場合とハズレた場合
+ #当たった場合、ハズレた場合
  if (slots[slot2] == 7 and slots[slot5] == 7 and slots[slot8] == 7)
    puts "中断のラインに7が揃いました"
    puts "500ポイント獲得"
@@ -97,7 +96,6 @@ loop do
    puts "あなたの持ちコインは#{current_coin}です"
  end
 
- #再プレイor終了選択
  puts "1(再BETする) 2(終了する)"
  select_number = gets.to_i
 
@@ -109,9 +107,8 @@ loop do
    puts "ゲームを終了します"
    return false
  else
-   puts "--------------------------------------------"
+
    puts "終了しました"
    return false
  end
-
 end
